@@ -21,6 +21,10 @@ export class DynamicFormFieldComponent {
     if (this.control.hasError('required')) {
       return 'This field is required';
     }
+
+    if (this.control.hasError('maxlength')) {
+      return `This field max length is ${this.control.getError('maxlength').requiredLength}`;
+    }
   }
 
 }

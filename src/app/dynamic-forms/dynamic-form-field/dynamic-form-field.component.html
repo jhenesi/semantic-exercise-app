@@ -8,6 +8,13 @@
       [type]="field.type"
       [formControl]="control"
     >
+    <mat-select  *ngSwitchCase="'dropdown'"
+      [placeholder]="field.label"
+      [id]="field.key"
+      [formControl]="control"
+    >
+      <mat-option *ngFor="let opt of field.options" [value]="opt.key">{{opt.value}}</mat-option>
+    </mat-select>
   </div>
   <mat-error *ngIf="control.invalid">{{getErrorMessage()}}</mat-error>
 </mat-form-field>

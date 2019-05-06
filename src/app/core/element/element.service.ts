@@ -1,7 +1,7 @@
-import { PeriodicElement } from './../../admin/secured/secured.component';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { PeriodicElement } from '../models/PeriodicElement';
 
 @Injectable({
   providedIn: 'root'

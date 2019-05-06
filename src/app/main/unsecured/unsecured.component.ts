@@ -1,6 +1,6 @@
 import { DynamicFormComponent } from './../../dynamic-forms/dynamic-form/dynamic-form.component';
 import { Component, AfterViewInit, ViewChild } from '@angular/core';
-import { Textfield } from 'src/app/dynamic-forms';
+import { Textfield, Dropdown } from 'src/app/dynamic-forms';
 
 @Component({
   selector: 'app-unsecured',
@@ -27,6 +27,15 @@ export class UnsecuredComponent implements AfterViewInit {
       label: 'Number',
       value: '',
       type: 'number'
+    }),
+    new Dropdown({
+      key: 'field4',
+      label: 'Dropdown',
+      options: [
+        { key: 'uno', value: 'Uno' },
+        { key: 'dos', value: 'Dos' },
+        { key: 'tres', value: 'Tres' }
+      ],
     })
   ];
 

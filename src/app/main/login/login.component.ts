@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
       label: 'Username',
       value: '',
       required: true,
+      maxLength: 5,
       type: 'text'
     }),
     new Textfield({
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit {
       label: 'Password',
       value: '',
       required: true,
+      maxLength: 5,
       type: 'password'
     })
   ];
