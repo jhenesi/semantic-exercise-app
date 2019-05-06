@@ -1,0 +1,9 @@
+.mat-card {
+    text-align: -webkit-center;
+}
+
+mat-card {
+    margin: auto;
+    max-width: 80%;
+}
+

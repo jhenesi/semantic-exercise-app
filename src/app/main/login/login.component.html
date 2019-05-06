@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-title>
+    Login
+  </mat-card-title>
+  <mat-card-content>
+    <app-dynamic-form
+      submitButtonText="Sign in"
+      [fields]="fields"
+      (submitted)="login($event)"
+    ></app-dynamic-form>
+  </mat-card-content>
+</mat-card>

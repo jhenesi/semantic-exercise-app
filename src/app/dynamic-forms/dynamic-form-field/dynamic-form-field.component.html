@@ -1,0 +1,13 @@
+<mat-form-field
+  class="full-width" 
+>
+  <div [ngSwitch]="field.controlType">
+    <input *ngSwitchCase="'textfield'" matInput
+      [placeholder]="field.label"
+      [id]="field.key"
+      [type]="field.type"
+      [formControl]="control"
+    >
+  </div>
+  <mat-error *ngIf="control.invalid">{{getErrorMessage()}}</mat-error>
+</mat-form-field>

@@ -1,0 +1,7 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+  <div *ngFor="let field of fields">
+    <app-dynamic-form-field [field]="field" [control]="form.controls[field.key]">
+    </app-dynamic-form-field>
+  </div>
+  <button mat-flat-button color="primary">{{this.submitButtonText}}</button>
+</form>

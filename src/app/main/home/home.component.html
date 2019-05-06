@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-title>
+    Home
+  </mat-card-title>
+  <mat-card-content>
+    <mat-list role="list">
+      <mat-list-item *ngIf="!isAuthenticated()" role="listitem">
+        <a routerLink="/login">Login</a>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <a routerLink="/unsecured">Unsecured route</a>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <a routerLink="/secured">Secured route</a>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

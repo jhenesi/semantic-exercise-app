@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <span class="fill-remaining-space">Semantic exercise</span>
+  <span *ngIf="isAuthenticated() && account">{{account.login}}</span>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <div [ngSwitch]="isAuthenticated()">
+      <div *ngSwitchCase="true">
+        <button mat-menu-item (click)="logout()">
+          <span>Sign Out</span>
+        </button>
+      </div>
+      <div *ngSwitchCase="false">
+        <button mat-menu-item (click)="login()">
+          <span>Sign In</span>
+        </button>
+      </div>
+    </div>
+  </mat-menu>
+</mat-toolbar>
